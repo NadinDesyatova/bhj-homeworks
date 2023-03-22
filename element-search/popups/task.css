@@ -18,6 +18,10 @@ body {
   display: flex;
 }
 
+.modal__close {
+
+}
+
 .modal__close_times {
   position: absolute;
   right: 5px;
