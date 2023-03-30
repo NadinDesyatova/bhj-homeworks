@@ -6,6 +6,4 @@ textEditorField.addEventListener('input', () => {
   localStorage.textValue = textEditorField.value;
 });
 
-if (storedText) {
-  textEditorField.value = storedText;
-}
+textEditorField.value = storedText;
