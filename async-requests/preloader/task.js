@@ -5,7 +5,7 @@ const items = document.getElementById('items');
 xhr.addEventListener('readystatechange', () => {
   if (xhr.readyState === xhr.DONE) {
     animation.className = 'loader';
-    let data = JSON.parse(xhr.responseText);
+    let data = xhr.response;
   	let allResponse = data['response'];
     let objectСurrencies = allResponse['Valute'];
     let arrayСurrencies = Object.values(objectСurrencies);
@@ -20,6 +20,8 @@ xhr.addEventListener('readystatechange', () => {
 });
 
 xhr.open('GET', 'https://students.netoservices.ru/nestjs-backend/slow-get-courses', true);
+
+xhr.responseType = 'json';
 
 xhr.send();
 
